@@ -4,11 +4,16 @@ import FeaturedBikes from '../components/FeaturedBikes';
 import WhyChooseUs from '../components/WhyChooseUs';
 import TestimonialSlider from '../components/TestimonialSlider';
 import CtaBanner from '../components/CtaBanner';
+import { Page } from '../App';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  onNavigate?: (page: Page) => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
     <>
-      <HeroSection />
+      <HeroSection onNavigate={onNavigate} />
       <FeaturedBikes />
       <WhyChooseUs />
       <TestimonialSlider />

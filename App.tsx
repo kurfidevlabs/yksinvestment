@@ -24,7 +24,7 @@ const App: React.FC = () => {
       <AnnouncementBar />
       <Header onNavigate={navigate} currentPage={currentPage} />
       <main>
-        {currentPage === 'home' && <HomePage />}
+        {currentPage === 'home' && <HomePage onNavigate={navigate} />}
         {currentPage === 'ebikes' && <EbikeCatalog />}
         {currentPage === 'solar' && <SolarCatalog />}
         {currentPage === 'payment' && <PaymentPlansPage />}
